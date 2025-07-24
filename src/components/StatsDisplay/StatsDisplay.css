@@ -1,0 +1,14 @@
+.stats-display {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.stats-display ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stats-display li {
+    margin-bottom: 0.5rem;
+}
