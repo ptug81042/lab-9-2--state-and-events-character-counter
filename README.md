@@ -6,7 +6,8 @@ A responsive React + TypeScript application that allows users to type text and s
 
 ## Live Demo on Netlify
 
-👉 golden-semolina-32da96.netlify.app
+Experience the live version of this Character Counter app deployed on Netlify:  
+[golden-semolina-32da96.netlify.app](golden-semolina-32da96.netlify.app)
 
 ---
 
