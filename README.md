@@ -4,9 +4,9 @@ A responsive React + TypeScript application that allows users to type text and s
 
 ---
 
-## Live Demo
+## Live Demo on Netlify
 
-👉 [View on Netlify](golden-semolina-32da96.netlify.app)  
+👉 golden-semolina-32da96.netlify.app
 
 ---
 
