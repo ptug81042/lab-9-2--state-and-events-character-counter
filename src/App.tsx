@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
+
+import CharacterCounter from './components/CharacterCounter/CharacterCounter';
+import StatsDisplay from './components/StatsDisplay/StatsDisplay';
+import TextInput from './components/TextInput/TextInput';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // State for the text input controlled by App
+  const [text, setText] = useState('');
+
+  // Compute stats based on the controlled text
+  const characterCount = text.length;
+  const words = text.trim().split(/\s+/).filter(Boolean);
+  const wordCount = words.length;
+  const readingTime = wordCount / 200;
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="App">
+        <h1>Character Counter Demo</h1>
+
+        <TextInput onChange={setText} placeholder='Type something here...' />
+
+        <StatsDisplay stats={{ characterCount, wordCount, readingTime }} showReadingTime={true} />
+
+        <hr />
+
+        <CharacterCounter minWords={5} maxWords={100} targetReadingTime={1} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
 
-export default App
+export default App;
