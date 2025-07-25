@@ -1,4 +1,3 @@
-import React from 'react';
 import type { StatsDisplayProps } from '../../types';
 import './StatsDisplay.css';
 

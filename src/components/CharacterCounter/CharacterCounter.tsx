@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import TextInput from '../TextInput/TextInput';
 import StatsDisplay from '../StatsDisplay/StatsDisplay';
 import type { CharacterCounterProps, TextStats } from '../../types';
