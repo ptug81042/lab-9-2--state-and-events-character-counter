@@ -6,8 +6,7 @@ A responsive React + TypeScript application that allows users to type text and s
 
 ## Live Demo
 
-👉 [View on Netlify](https://your-netlify-demo-link.netlify.app)  
-*(replace this link with your actual Netlify URL once deployed)*
+👉 [View on Netlify](golden-semolina-32da96.netlify.app)  
 
 ---
 
