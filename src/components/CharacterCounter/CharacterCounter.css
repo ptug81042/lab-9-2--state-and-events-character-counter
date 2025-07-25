@@ -3,12 +3,65 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     max-width: 600px;
-    margin: auto;
+    margin: 1rem auto;
     background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
 }
 
 .warning {
     color: #d9534f;
     font-weight: bold;
     margin-top: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .character-counter {
+        padding: 1rem;
+        max-width: 90%;
+    }
+}
+
+/* Progress bar container */
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+/* Dynamic progress bar */
+.progress-bar {
+    height: 100%;
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* StatsDisplay enhancement (optional if styled inside component) */
+.stats-display {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Subtle animation for warnings */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

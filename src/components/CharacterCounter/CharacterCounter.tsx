@@ -40,6 +40,21 @@ function CharacterCounter({
             {/* Display calculated text statistics */}
             <StatsDisplay stats={stats} showReadingTime={true} />
 
+            {/* Progress bar indicating how close the user is to maxWords */}
+            {Number.isFinite(maxWords) && (
+            <div className="progress-container">
+                {/* Inner progress bar width is calculated based on current word count */}
+                <div
+                className="progress-bar"
+                style={{
+                    width: `${Math.min((stats.wordCount / maxWords) * 100, 100)}%`, // Cap at 100%
+                    backgroundColor: stats.wordCount > maxWords ? '#f44336' : '#4caf50', // Red if exceeded
+                }}
+                />
+            </div>
+            )}
+
+
             {/* Conditionally show warning messages based on user-defined limit */}
             {stats.wordCount < minWords && (
                 <p className="warning">
